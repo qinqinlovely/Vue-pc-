@@ -3,10 +3,15 @@ import VueRouter from 'vue-router'
 import Me from '../views/Me.vue'
 import Register from '../views/Register.vue'
 import Index from '../views/Index.vue'
+import Search from '../views/Search.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/search',
+    component: Search
+  },
   {
     path: '/',
     component: Index
