@@ -7,12 +7,16 @@ import axios from 'axios'
 import MintUI from 'mint-ui';
 import 'mint-ui/lib/style.min.css';
 
+import Vant from 'vant';
+import 'vant/lib/index.css';
+
 import qs from 'qs'
 axios.defaults.baseURL = 'http://127.0.0.1'
 Vue.prototype.axios = axios;
 Vue.config.productionTip = false
 
 Vue.use(MintUI);
+Vue.use(Vant);
 
 new Vue({
   router,
