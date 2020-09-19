@@ -80,10 +80,9 @@
 
 <style scoped>
 /* 热卖排行榜 */
-.index-choice，.new-recommend{
+.index-choice{
     background: #fff;
     margin-top: 0.625rem;
-    position: relative;
     padding-left: 2px;
 }
 .index-title{
