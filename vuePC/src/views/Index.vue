@@ -77,6 +77,9 @@
         <!-- 畅销推荐开始 -->
         <popular></popular>
         <!-- 畅销推荐结束 -->
+        <!-- 精选品牌 -->
+        <pinpai></pinpai>
+        <!-- 精选品牌 -->
 
 
         <!-- 底部选项卡开始 -->
@@ -112,6 +115,7 @@ import Newrecommend from '../components/Newrecommend'
 import Hotsale from '../components/Hotsale'
 import Activities from '../components/Activities'
 import Popular from '../components/Popular'
+import Pinpai from '../components/Pinpai'
 export default {
     data(){
         return{
@@ -126,7 +130,7 @@ export default {
             },
         }
     },
-    components:{ Carousel,Newrecommend,Hotsale,Activities,Popular }
+    components:{ Carousel,Newrecommend,Hotsale,Activities,Popular,Pinpai }
 }
 </script>
 
