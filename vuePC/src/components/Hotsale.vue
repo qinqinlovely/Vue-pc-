@@ -1,7 +1,7 @@
 <template>
         <div class="index-choice">
-            <div class="index-title">新品推荐</div>
-            <ul class="tuijian-list">
+            <div class="index-title">热卖排行榜</div>
+            <ul class="hot-list">
                 <li class="products-item">
                     <router-link to="/">
                         <img src="../assets/products/bvlgari.jpg" alt="">
@@ -96,7 +96,7 @@
     padding-top: 1.56rem;
     margin-bottom: 1.25rem;
 }
-.tuijian-list{
+.hot-list{
     background: #fff;
 }
 .products-item{

@@ -65,89 +65,18 @@
                 </li>
             </ul>
         </div>
-
         <!-- 热卖排行榜开始 -->
-        <!-- <div class="index-choice">
-            <div class="index-title">热卖排行榜</div>
-            <ul class="hot-list">
-                <li class="products-item">
-                    <router-link to="/">
-                        <img src="../assets/products/bvlgari.jpg" alt="">
-                        <div class="base-name">【陈伟霆/赤西仁同款】BVLGARI 宝格丽 大吉岭夜色（夜幽）男士淡香水 EDT 100ml</div>
-                        <div class="product-price">
-                            <span class="price_now">$55.99</span>
-                            <span class="price_was">$88.00</span>
-                        </div>
-                        <div class="price">参考价：￥378.44</div>
-                        <button class="cart"></button>
-                    </router-link>
-                </li>
-                <li class="products-item">
-                    <router-link to="/">
-                        <img src="../assets/products/bvlgari.jpg" alt="">
-                        <div class="base-name">【陈伟霆/赤西仁同款】BVLGARI 宝格丽 大吉岭夜色（夜幽）男士淡香水 EDT 100ml</div>
-                        <div class="product-price">
-                            <span class="price_now">$55.99</span>
-                            <span class="price_was">$88.00</span>
-                        </div>
-                        <div class="price">参考价：￥378.44</div>
-                        <button class="cart"></button>
-                    </router-link>
-                </li>
-                <li class="products-item">
-                    <router-link to="/">
-                        <img src="../assets/products/bvlgari.jpg" alt="">
-                        <div class="base-name">【陈伟霆/赤西仁同款】BVLGARI 宝格丽 大吉岭夜色（夜幽）男士淡香水 EDT 100ml</div>
-                        <div class="product-price">
-                            <span class="price_now">$55.99</span>
-                            <span class="price_was">$88.00</span>
-                        </div>
-                        <div class="price">参考价：￥378.44</div>
-                        <button class="cart"></button>
-                    </router-link>
-                </li>
-                <li class="products-item">
-                    <router-link to="/">
-                        <img src="../assets/products/bvlgari.jpg" alt="">
-                        <div class="base-name">【陈伟霆/赤西仁同款】BVLGARI 宝格丽 大吉岭夜色（夜幽）男士淡香水 EDT 100ml</div>
-                        <div class="product-price">
-                            <span class="price_now">$55.99</span>
-                            <span class="price_was">$88.00</span>
-                        </div>
-                        <div class="price">参考价：￥378.44</div>
-                        <button class="cart"></button>
-                    </router-link>
-                </li>
-                <li class="products-item">
-                    <router-link to="/">
-                        <img src="../assets/products/bvlgari.jpg" alt="">
-                        <div class="base-name">【陈伟霆/赤西仁同款】BVLGARI 宝格丽 大吉岭夜色（夜幽）男士淡香水 EDT 100ml</div>
-                        <div class="product-price">
-                            <span class="price_now">$55.99</span>
-                            <span class="price_was">$88.00</span>
-                        </div>
-                        <div class="price">参考价：￥378.44</div>
-                        <button class="cart"></button>
-                    </router-link>
-                </li>
-                <li class="products-item">
-                    <router-link to="/">
-                        <img src="../assets/products/bvlgari.jpg" alt="">
-                        <div class="base-name">【陈伟霆/赤西仁同款】BVLGARI 宝格丽 大吉岭夜色（夜幽）男士淡香水 EDT 100ml</div>
-                        <div class="product-price">
-                            <span class="price_now">$55.99</span>
-                            <span class="price_was">$88.00</span>
-                        </div>
-                        <div class="price">参考价：￥378.44</div>
-                        <button class="cart"></button>
-                    </router-link>
-                </li>
-            </ul>
-        </div> -->
+        <hotsale></hotsale>
         <!-- 热卖排行榜结束 -->
         <!-- 新品推荐开始 -->
         <newrecommend></newrecommend>
         <!-- 新品推荐结束 -->
+        <!-- 精选活动开始 -->
+        <activities></activities>
+        <!-- 精选活动结束 -->
+        <!-- 畅销推荐开始 -->
+        <popular></popular>
+        <!-- 畅销推荐结束 -->
 
 
         <!-- 底部选项卡开始 -->
@@ -180,6 +109,9 @@
 <script>
 import Carousel from '../components/Carousel'
 import Newrecommend from '../components/Newrecommend'
+import Hotsale from '../components/Hotsale'
+import Activities from '../components/Activities'
+import Popular from '../components/Popular'
 export default {
     data(){
         return{
@@ -194,7 +126,7 @@ export default {
             },
         }
     },
-    components:{ Carousel,Newrecommend }
+    components:{ Carousel,Newrecommend,Hotsale,Activities,Popular }
 }
 </script>
 
