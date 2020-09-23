@@ -1,45 +1,50 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Me from '../views/Me.vue'
-import Register from '../views/Register.vue'
-import Index from '../views/Index.vue'
-import Search from '../views/Search.vue'
-import Category from '../views/Category.vue'
-import Brand from '../views/Brand.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Me from "../views/Me.vue";
+import Register from "../views/Register.vue";
+import Index from "../views/Index.vue";
+import Search from "../views/Search.vue";
+import Category from "../views/Category.vue";
+import Brand from "../views/Brand.vue";
+import Cart from "../views/Cart.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/brand',
-    component: Brand
+    path: "/cart",
+    component: Cart,
   },
   {
-    path: '/category',
-    component: Category
+    path: "/brand",
+    component: Brand,
   },
   {
-    path: '/search',
-    component: Search
+    path: "/category",
+    component: Category,
   },
   {
-    path: '/',
-    component: Index
+    path: "/search",
+    component: Search,
   },
   {
-    path: '/register',
-    component: Register
+    path: "/",
+    component: Index,
   },
   {
-    path: '/me',
-    component: Me
+    path: "/register",
+    component: Register,
   },
-]
+  {
+    path: "/me",
+    component: Me,
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
