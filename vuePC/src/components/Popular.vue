@@ -3,28 +3,64 @@
     <div class="popular-title">畅销推荐</div>
     <!-- 选项卡部分 -->
     <van-tabs>
-      <van-tab v-for="index in 6" :key="index" :title="'选项' + index"
-        >内容{{ index }}</van-tab
+      <van-tab
+        v-model="active"
+        v-for="(title, index) in tabTitle"
+        :key="index"
+        :title="title"
       >
+        {{ active }}
+        <!-- <div class="main">
+          <ul class="hot-list">
+            <li class="products-item">
+              <router-link to="/">
+                <img src="../assets/products/bvlgari.jpg" alt="" />
+                <div class="base-name">
+                  【陈伟霆/赤西仁同款】BVLGARI 宝格丽
+                  大吉岭夜色（夜幽）男士淡香水 EDT 100ml
+                </div>
+                <div class="product-price">
+                  <span class="price_now">$55.99</span>
+                  <span class="price_was">$88.00</span>
+                </div>
+                <div class="price">参考价：￥378.44</div>
+                <button class="cart"></button>
+              </router-link>
+            </li>
+          </ul>
+        </div> -->
+      </van-tab>
     </van-tabs>
-    <div>111</div>
-    <div>111</div>
-    <div>111</div>
-    <div>111</div>
-    <div>111</div>
-    <div>111</div>
-    <div>111</div>
-    <div>111</div>
-    <div>111</div>
-    <div>111</div>
-    <div>111</div>
-    <div>111</div>
-    <div>111</div>
     <router-link to="/">
       <span>查看更多</span>
     </router-link>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      tabTitle: [
+        "平价香水",
+        "高颜值香水",
+        "面部护理",
+        "礼盒套装",
+        "人气美妆",
+        "身体洗护",
+      ],
+      active: "1",
+      products: [],
+    };
+  },
+  watch: {
+    active(value) {
+      console.log(value);
+    },
+  },
+  mounted() {},
+};
+</script>
 
 
 <style scoped>

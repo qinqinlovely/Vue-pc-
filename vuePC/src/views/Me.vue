@@ -10,6 +10,7 @@
         <router-link to="/register">注册</router-link>
       </div>
     </mt-header>
+
     <van-form @submit="onSubmit" class="form">
       <van-field
         v-model="username"
@@ -24,8 +25,13 @@
         placeholder="密码"
         :rules="[{ required: true, message: '请填写密码' }]"
       />
-      <div style="margin: 16px;">
-        <van-button block native-type="submit">提交</van-button>
+      <div style="margin: 16px">
+        <van-button
+          block
+          native-type="submit"
+          style="background-color: #ccc; color: white"
+          >登录</van-button
+        >
       </div>
     </van-form>
   </div>
