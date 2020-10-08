@@ -1,5 +1,5 @@
 <template>
-  <van-tabbar v-model="active" active-color="#522555" placeholder>
+  <van-tabbar v-model="active" active-color="#522555" placeholder v-show="$route.path!=='/me' && $route.path!=='/cart' && $route.path!=='/detail'">
     <van-tabbar-item
       replace
       v-for="(item, index) in tabbarList"

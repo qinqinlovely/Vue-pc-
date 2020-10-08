@@ -1,62 +1,44 @@
 <template>
-  <div class="index-choice">
-    <div class="index-title">热卖排行榜</div>
+  <div>
     <ul class="hot-list">
-      <li class="products-item" v-for="(item, index) of hotsale" :key="index">
-        <router-link to="/detail">
+      <li class="products-item" v-for="(item,index) in products" :key="index">
+        <router-link to="/">
           <img :src="item.pic_sm" alt="" />
           <div class="base-name">
-            {{ item.title }}
+            {{item.title}}
           </div>
           <div class="product-price">
-            <span class="price_now">${{ item.now_price }}</span>
-            <span class="price_was">${{ item.was_price }}</span>
+            <span class="price_now">${{item.now_price}}</span>
+            <span class="price_was">${{item.was_price}}</span>
           </div>
-          <div class="price">参考价：￥{{ item.price }}</div>
+          <div class="price">参考价：￥{{item.price}}</div>
           <button class="cart"></button>
         </router-link>
       </li>
-    </ul>
+    </ul>   
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      hotsale: [],
-    };
+  data(){
+    return{
+       products: [],
+    }
   },
   mounted() {
-    this.axios.get("/hotsale").then((res) => {
-      let data = res.data.results;
-      data.forEach((item) => {
-        item.pic_sm = require("../assets/products/" + item.pic_sm);
-        this.hotsale.push(item);
-      });
-    });
+    this.axios.get("/shenti").then(res=>{
+      let data=res.data.results;
+      data.forEach((item)=>{
+        item.pic_sm=require("../assets/products/"+item.pic_sm);
+        this.products.push(item);
+      })
+    })
   },
-};
+}
 </script>
 
 <style scoped>
-/* 热卖排行榜 */
-.index-choice {
-  background: #fff;
-  margin-top: 0.625rem;
-  padding-left: 2px;
-  overflow: hidden;
-}
-.index-title {
-  font-size: 1.06rem;
-  color: #333;
-  text-align: center;
-  font-weight: 700;
-  line-height: 1.06rem;
-  font-family: PingFangSC-Medium;
-  padding-top: 1.56rem;
-  margin-bottom: 1.25rem;
-}
 .hot-list {
   background: #fff;
 }
@@ -116,4 +98,5 @@ export default {
   color: #999;
   margin-top: 0.5rem;
 }
+
 </style>

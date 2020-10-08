@@ -12,7 +12,7 @@ const pool = mysql.createPool({
   host: "127.0.0.1",
   port: 3306,
   user: "root",
-  password: "",
+  password: "root",
   database: "mysc_vue",
   charset: "utf8",
   connectionLimit: 20,
@@ -64,6 +64,60 @@ server.get("/recommend", (req, res) => {
     res.send({ message: "查询成功", code: 1, results: results });
   });
 });
+
+//获取tabs中平价标签的商品信息
+server.get("/pinjia",(req,res)=>{
+  let sql='SELECT id,title,pic_sm,now_price,format(was_price,2) as "was_price",format(price,2) as "price",count FROM mysc_detail WHERE category_id=1';
+  pool.query(sql,(err,results)=>{
+    if(err) throw err;
+    res.send({message:"查询成功",code:1,results:results});
+  })
+})
+
+//获取tab中高颜值标签的商品信息
+server.get("/gaoyanzhi",(req,res)=>{
+  let sql='SELECT id,title,pic_sm,now_price,format(was_price,2) as "was_price",format(price,2) as "price",count FROM mysc_detail WHERE category_id=2';
+  pool.query(sql,(err,results)=>{
+    if(err) throw err;
+    res.send({message:"查询成功",code:1,results:results});
+  })
+})
+
+//获取tab中面部护理标签的商品信息
+server.get("/mianbu",(req,res)=>{
+  let sql='SELECT id,title,pic_sm,now_price,format(was_price,2) as "was_price",format(price,2) as "price",count FROM mysc_detail WHERE category_id=3';
+  pool.query(sql,(err,results)=>{
+    if(err) throw err;
+    res.send({message:"查询成功",code:1,results:results});
+  })
+})
+
+//获取tab中礼盒套装标签的商品信息
+server.get("/lihe",(req,res)=>{
+  let sql='SELECT id,title,pic_sm,now_price,format(was_price,2) as "was_price",format(price,2) as "price",count FROM mysc_detail WHERE category_id=4';
+  pool.query(sql,(err,results)=>{
+    if(err) throw err;
+    res.send({message:"查询成功",code:1,results:results});
+  })
+})
+
+//获取tab中人气美妆标签的商品信息
+server.get("/meizhuang",(req,res)=>{
+  let sql='SELECT id,title,pic_sm,now_price,format(was_price,2) as "was_price",format(price,2) as "price",count FROM mysc_detail WHERE category_id=5';
+  pool.query(sql,(err,results)=>{
+    if(err) throw err;
+    res.send({message:"查询成功",code:1,results:results});
+  })
+})
+
+//获取tab中身体洗护标签的商品信息
+server.get("/shenti",(req,res)=>{
+  let sql='SELECT id,title,pic_sm,now_price,format(was_price,2) as "was_price",format(price,2) as "price",count FROM mysc_detail WHERE category_id=6';
+  pool.query(sql,(err,results)=>{
+    if(err) throw err;
+    res.send({message:"查询成功",code:1,results:results});
+  })
+})
 
 // //获取畅销推荐的商品信息
 // server.get("/salerecom", (req, res) => {

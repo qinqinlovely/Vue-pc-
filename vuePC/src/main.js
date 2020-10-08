@@ -19,6 +19,7 @@ Vue.config.productionTip = false;
 Vue.use(MintUI);
 Vue.use(Vant);
 Vue.use(Icon);
+Vue.use(router);
 
 new Vue({
   router,

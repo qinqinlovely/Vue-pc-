@@ -20,7 +20,7 @@
     <div class="category">
       <ul class="cate-list">
         <li>
-          <router-link to="/">
+          <router-link to="/categories/xiangshui">
             <img src="../assets/in-category/xiangshui.png" alt />
           </router-link>
           <router-link to="/" class="category-title">香水香氛</router-link>
